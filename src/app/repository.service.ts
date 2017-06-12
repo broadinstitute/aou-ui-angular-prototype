@@ -1,10 +1,10 @@
 // Data interface for getting details about available CDRs. This communicates
 // via Angular's builtin Http module with a (fake) REST API.
 
+import 'rxjs/add/operator/toPromise';
+
 import {Injectable} from '@angular/core';
 import {Headers, Http} from '@angular/http';
-
-import 'rxjs/add/operator/toPromise';
 
 import {Repository} from './repository';
 
@@ -17,22 +17,22 @@ export class RepositoryService {
 
   list(): Promise<Repository[]> {
     return this.http
-      .get(this.apiUrl)
-      .toPromise()
-      .then(response => response.json().data as Repository[])
-      .catch(this.handleError);
+        .get(this.apiUrl)
+        .toPromise()
+        .then(response => response.json().data as Repository[])
+        .catch(this.handleError);
   }
 
   get(id: number): Promise<Repository> {
     return this.http
-      .get(`${this.apiUrl}/${id}`)
-      .toPromise()
-      .then(response => response.json().data as Repository)
-      .catch(this.handleError);
+        .get(`${this.apiUrl}/${id}`)
+        .toPromise()
+        .then(response => response.json().data as Repository)
+        .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
+    console.error('An error occurred', error);  // for demo purposes only
     return Promise.reject(error.message || error);
   }
 }
