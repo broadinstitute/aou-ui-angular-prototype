@@ -1,9 +1,9 @@
 // An in-memory database to back the fake repository REST API.
 // RepositoryService uses Angular's http module to (fake) talk to this API.
 
-import { InMemoryDbService } from 'angular-in-memory-web-api';
+import {InMemoryDbService} from 'angular-in-memory-web-api';
 
-import { PermissionLevel } from './permission-level'
+import {PermissionLevel} from './permission-level'
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {

@@ -1,10 +1,10 @@
 // View for logging in and switching user / permission levels.
 
-import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { User }              from './user'
-import { UserService }       from './user.service'
+import {User} from './user'
+import {UserService} from './user.service'
 
 @Component({
   templateUrl: './login.component.html'
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router
-  ) { }
+  ) {}
 
   user: User;  // currently logged in, may be undefined
   login: User = new User();  // form data

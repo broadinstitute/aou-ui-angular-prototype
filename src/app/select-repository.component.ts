@@ -4,13 +4,13 @@
 // elements). In a real server, these would of course need to be enforced
 // server-side.
 
-import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { User }              from './user';
-import { UserService }       from './user.service';
-import { Repository }        from './repository';
-import { RepositoryService } from './repository.service';
+import {User} from './user';
+import {UserService} from './user.service';
+import {Repository} from './repository';
+import {RepositoryService} from './repository.service';
 
 @Component({
   templateUrl: './select-repository.component.html'
