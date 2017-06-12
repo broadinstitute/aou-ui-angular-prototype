@@ -39,7 +39,8 @@ const vaadinConfig = {
 
 @Component({templateUrl: './cohort-builder.component.html'})
 export class CohortBuilderComponent implements OnInit {
-  vaadinJsUrl = 'https://35.185.116.214/pmi-cb/VAADIN/vaadinBootstrap.js?v=7.7.5'
+  vaadinJsUrl =
+      'https://35.185.116.214/pmi-cb/VAADIN/vaadinBootstrap.js?v=7.7.5';
 
   repository: Repository;
 
@@ -50,7 +51,8 @@ export class CohortBuilderComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-        .switchMap((params: Params) => this.repositoryService.get(+params['id']))
+        .switchMap(
+            (params: Params) => this.repositoryService.get(+params['id']))
         .subscribe(repository => {
           this.repository = repository;
           vaadin.initApplication(vaadinRootElementId, vaadinConfig);
