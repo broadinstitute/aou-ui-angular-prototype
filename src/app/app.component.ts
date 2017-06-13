@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
   selector: 'aou-app',
   styleUrls: [ './app.component.css' ],
   template: `
-    <h1>{{title}}</h1>
+    <div style="display: flex; align-items: flex-end;">
+      <img src="images/all-of-us-logo.svg" alt="All of Us Logo" style="width: 18rem;">
+      <img src="images/portal-logo.svg" alt="Researcher Portal Logo"
+        style="margin-left: 0.5rem; width: 13rem;">
+    </div>
     <nav>
       <a routerLink="/login" routerLinkActive="active">Switch User</a>
       <a routerLink="/repository" routerLinkActive="active">Select CDR</a>
