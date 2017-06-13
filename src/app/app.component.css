@@ -1,3 +1,14 @@
+div:first-child {
+  display: flex;
+  align-items: flex-end;
+}
+div:first-child img:first-child {
+  width: 18rem;
+}
+div:first-child img:nth-child(2) {
+  margin-left: 0.5rem;
+  width: 13rem;
+}
 nav {
   margin-top: 1rem;
 }
