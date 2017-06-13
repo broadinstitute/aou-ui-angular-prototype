@@ -1,11 +1,11 @@
-div:first-child {
+.logos-container {
   display: flex;
   align-items: flex-end;
 }
-div:first-child img:first-child {
+.main-logo {
   width: 18rem;
 }
-div:first-child img:nth-child(2) {
+.portal-logo {
   margin-left: 0.5rem;
   width: 13rem;
 }

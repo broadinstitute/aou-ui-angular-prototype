@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   selector: 'aou-app',
   styleUrls: [ './app.component.css' ],
   template: `
-    <div>
-      <img src="images/all-of-us-logo.svg" alt="All of Us">
-      <img src="images/portal-logo.svg" alt="Researcher Portal">
+    <div class="logos-container">
+      <img class="main-logo" src="images/all-of-us-logo.svg" alt="All of Us">
+      <img class="portal-logo" src="images/portal-logo.svg" alt="Researcher Portal">
     </div>
     <nav>
       <a routerLink="/login" routerLinkActive="active">Switch User</a>
