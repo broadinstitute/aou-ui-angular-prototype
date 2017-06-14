@@ -16,18 +16,15 @@ const vaadinConfig = {
   'widgetset': 'org.vumc.ori.cohortbuilder.widgetsets.CohortBuilderWidgetSet',
   'comErrMsg': {
     'caption': 'Communication problem',
-    'message':
-        'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
+    'message': 'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
   },
   'authErrMsg': {
     'caption': 'Authentication problem',
-    'message':
-        'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
+    'message': 'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
   },
   'sessExpMsg': {
     'caption': 'Session Expired',
-    'message':
-        'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
+    'message': 'Take note of any unsaved data, and <u>click here</u> or press ESC to continue.',
   },
   'vaadinDir': 'https://35.185.116.214/pmi-cb/VAADIN/',
   'debug': false,

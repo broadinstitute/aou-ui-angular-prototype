@@ -10,8 +10,7 @@ import {User} from './user';
 
 @Injectable()
 export class UserService {
-  private user:
-      User = {id: 1, name: 'All of Us User', permission: PermissionLevel.Public}
+  private user: User = {id: 1, name: 'All of Us User', permission: PermissionLevel.Public}
 
   getLoggedInUser(): Promise<User> {
     return Promise.resolve(this.user);
