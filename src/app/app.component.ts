@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'aou-app',
   styleUrls: ['./app.component.css'],
-  templateUrl: ['./app.component.html']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {}
