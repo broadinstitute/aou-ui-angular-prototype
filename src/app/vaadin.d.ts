@@ -6,4 +6,5 @@ interface VaadinNs {
   initApplication: (a: string, b: any) => any;
 }
 
+// This var name matches the third-party symbol name.
 declare var vaadin: VaadinNs;
