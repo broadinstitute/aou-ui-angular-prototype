@@ -15,6 +15,7 @@ import {InMemoryDataService} from 'app/services/in-memory-data.service';
 import {LoginComponent} from 'app/views/login/component'
 import {RepositoryService} from 'app/services/repository.service'
 import {SelectRepositoryComponent} from 'app/views/select-repository/component'
+import {SignInComponent} from './sign-in.component'
 import {UserService} from 'app/services/user.service'
 import {VAADIN_CLIENT} from 'app/vaadin-client';
 
@@ -30,7 +31,8 @@ import {VAADIN_CLIENT} from 'app/vaadin-client';
     AppComponent,
     LoginComponent,
     SelectRepositoryComponent,
-    CohortBuilderComponent
+    CohortBuilderComponent,
+    SignInComponent
   ],
   providers: [
     UserService,
