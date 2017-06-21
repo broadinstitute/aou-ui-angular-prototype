@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
+declare const gapi: any;
+
 @Component({selector: 'sign-in', templateUrl: './sign-in.component.html'})
 export class SignInComponent implements OnInit {
   constructor(
@@ -9,6 +11,10 @@ export class SignInComponent implements OnInit {
 
   isLoaded: boolean = false;
   isSignedIn: boolean = false;
+
+  forceLoaded(e: Event): void {
+    this.isLoaded = true;
+  }
 
   signIn(e: Event): void {
     gapi.auth2.getAuthInstance().signIn();
@@ -37,11 +43,11 @@ export class SignInComponent implements OnInit {
     console.log('signed in: '+this.isSignedIn);
   }
 
-  handleAuth2Error(e): void {
+  handleAuth2Error(e: Error): void {
     console.error(e);
   }
 
-  handleUserDidChange(user): void {
+  handleUserDidChange(user: any): void {
     this.isSignedIn = user.isSignedIn();
   }
 }
