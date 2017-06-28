@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 
 declare const gapi: any;
 
-@Component({selector: 'sign-in', templateUrl: './sign-in.component.html'})
+@Component({selector: 'sign-in', templateUrl: './component.html'})
 export class SignInComponent implements OnInit {
   constructor(
       private router: Router
