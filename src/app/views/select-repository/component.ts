@@ -12,7 +12,7 @@ import {RepositoryService} from 'app/services/repository.service';
 import {User} from 'app/models/user';
 import {UserService} from 'app/services/user.service';
 
-@Component({templateUrl: './select-repository.component.html'})
+@Component({templateUrl: './component.html'})
 export class SelectRepositoryComponent implements OnInit {
   repositories: Repository[] = [];
   user: User;

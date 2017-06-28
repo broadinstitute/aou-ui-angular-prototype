@@ -9,12 +9,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 import {AppRoutingModule} from 'app/app-routing.module'
-import {AppComponent} from 'app/views/app/app.component';
-import {CohortBuilderComponent} from 'app/views/cohort-builder/cohort-builder.component'
+import {AppComponent} from 'app/views/app/component';
+import {CohortBuilderComponent} from 'app/views/cohort-builder/component'
 import {InMemoryDataService} from 'app/services/in-memory-data.service';
-import {LoginComponent} from 'app/views/login/login.component'
+import {LoginComponent} from 'app/views/login/component'
 import {RepositoryService} from 'app/services/repository.service'
-import {SelectRepositoryComponent} from 'app/views/select-repository/select-repository.component'
+import {SelectRepositoryComponent} from 'app/views/select-repository/component'
 import {UserService} from 'app/services/user.service'
 import {VAADIN_CLIENT} from 'app/vaadin-client';
 

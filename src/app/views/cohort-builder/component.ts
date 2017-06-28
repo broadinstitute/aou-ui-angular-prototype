@@ -35,7 +35,7 @@ const vaadinConfig = {
   'browserDetailsUrl': 'https://35.185.116.214/pmi-cb/'
 };
 
-@Component({templateUrl: './cohort-builder.component.html'})
+@Component({templateUrl: './component.html'})
 export class CohortBuilderComponent implements OnInit {
   vaadinJsUrl =
       'https://35.185.116.214/pmi-cb/VAADIN/vaadinBootstrap.js?v=7.7.5';

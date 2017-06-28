@@ -7,7 +7,7 @@ import {PermissionLevel} from 'app/models/permission-level'
 import {User} from 'app/models/user'
 import {UserService} from 'app/services/user.service'
 
-@Component({templateUrl: './login.component.html'})
+@Component({templateUrl: './component.html'})
 export class LoginComponent implements OnInit {
   constructor(
       private userService: UserService,
