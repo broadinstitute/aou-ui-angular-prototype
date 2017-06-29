@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 declare const gapi: any;
@@ -6,15 +6,12 @@ declare const gapi: any;
 @Component({selector: 'sign-in', templateUrl: './component.html'})
 export class SignInComponent implements OnInit {
   constructor(
+      private cdRef: ChangeDetectorRef,
       private router: Router
   ) {}
 
   isLoaded: boolean = false;
   isSignedIn: boolean = false;
-
-  forceLoaded(e: Event): void {
-    this.isLoaded = true;
-  }
 
   signIn(e: Event): void {
     gapi.auth2.getAuthInstance().signIn();
@@ -37,10 +34,9 @@ export class SignInComponent implements OnInit {
 
   handleAuth2Initialized(): void {
     this.isLoaded = true;
-    console.log('loaded: '+this.isLoaded);
     gapi.auth2.getAuthInstance().currentUser.listen(this.handleUserDidChange.bind(this))
     this.isSignedIn = gapi.auth2.getAuthInstance().currentUser.get().isSignedIn();
-    console.log('signed in: '+this.isSignedIn);
+    this.cdRef.detectChanges();
   }
 
   handleAuth2Error(e: Error): void {
@@ -49,5 +45,6 @@ export class SignInComponent implements OnInit {
 
   handleUserDidChange(user: any): void {
     this.isSignedIn = user.isSignedIn();
+    this.cdRef.detectChanges();
   }
 }
