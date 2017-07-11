@@ -23,8 +23,8 @@ export class RepositoryService {
   }
 
   get(id: number): Promise<Repository> {
-    for (let repo of this.REPOSITORY) {
-      if (repo.id == id) {
+    for (const repo of this.REPOSITORY) {
+      if (repo.id === id) {
         return Promise.resolve(repo);
       }
     }

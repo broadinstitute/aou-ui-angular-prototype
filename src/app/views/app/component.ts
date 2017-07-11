@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
         while (currentRoute.firstChild) {
           currentRoute = currentRoute.firstChild;
         }
-        if (currentRoute.outlet == 'primary') {
+        if (currentRoute.outlet === 'primary') {
           currentRoute.data.subscribe(value =>
               this.titleService.setTitle(`${value.title} | ${this.baseTitle}`));
         }
