@@ -1,21 +1,24 @@
 // Mediate communication with the All of Us backend server, for workspace
 // management etc.
 
+import 'rxjs/add/operator/toPromise';
+
+import {Http} from '@angular/http';
 import {Injectable} from '@angular/core';
+
+import {environment} from 'environment';
 
 @Injectable()
 export class AllOfUsService {
-  // TODO configure apiUrl per environment / set up environments.
-  private apiUrl = 'http://all-of-us-workbench-test.appspot.com/api/v1/'
   constructor(private http: Http) {}
 
   // Gets a "hello world" value from the server (a test endpoint).
   getHelloWorld(): Promise<String> {
     return this.http
-        .get(this.apiUrl)
+        .get(environment.allOfUsApiUrl)
         .toPromise()
         .then(response => response.text())
-        .chatch(this.handleError);
+        .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
