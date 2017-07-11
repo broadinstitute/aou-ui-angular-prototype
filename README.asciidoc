@@ -15,6 +15,10 @@ Install project deps:
 
  npm install
 
+Direct your editor to write swap files outside the source tree, so Webpack
+does not reload when they're updated.
+https://github.com/angular/angular-cli/issues/4593[Example for vim].
+
 == Every Time
 
 From the project root:
