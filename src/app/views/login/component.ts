@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
   permissionValues = Object.keys(PermissionLevel).map(k => PermissionLevel[k])
       .filter(v => typeof v === 'number') as number[];
   permissionNames = PermissionLevel;
+
+  // A demo value fetched from the backend, to illustrate login status
+  // as fetched from Firecloud via the AllOfUsService.
   firecloudStatus: String = '';
 
   constructor(
