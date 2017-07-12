@@ -1,4 +1,5 @@
-// Data interface for getting details about available CDRs.
+// Data interface for getting details about available CDRs. This fake service
+// uses hardcoded data for demo purposes.
 
 import {Injectable} from '@angular/core';
 
