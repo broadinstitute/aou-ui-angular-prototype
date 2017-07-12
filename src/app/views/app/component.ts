@@ -22,12 +22,16 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Pick up the global site title from HTML, and (for non-prod) add a tag
+    // naming the current environment.
     this.baseTitle = this.titleService.getTitle();
     if (environment.displayTag) {
       this.baseTitle = `[${environment.displayTag}] ${this.baseTitle}`;
       this.titleService.setTitle(this.baseTitle);
     }
 
+    // After navigation events, get the "title" value of the current Route and
+    // include it in the web page title.
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         let currentRoute = this.activatedRoute;
